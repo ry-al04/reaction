@@ -11,7 +11,7 @@ def first_order_reaction(t, y, k):
     A = y[0]
     dAdt = -k * A
     return [dAdt]
-k = 0.1     # rate constant
+k = 0.3     # rate constant
 A0 = 1.0    # initial concentration of A
 t_span = (0, 10)  # time range for the simulation
 solution_1st = solve_ivp(

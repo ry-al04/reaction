@@ -11,9 +11,10 @@ def first_order_reaction(t, y, k):
     A = y[0]
     dAdt = -k * A
     return [dAdt]
+
 k = 0.5e-4     # rate
 A0 = 0.1    # initial concentration of A
-t_span = (0, 100)  # Time range
+t_span = (0, 100)  # Time Range
 solution_1st = solve_ivp(
     fun=lambda t, y: first_order_reaction(t, y, k),
     t_span=t_span,
